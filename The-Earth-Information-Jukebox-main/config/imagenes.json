@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ac43767c",
+    "titulo": "GEOS-FP Near-Surface Humidity",
+    "ubicacion": "Global",
+    "descripcion": "Near-surface humidity, also known as specific humidity (Q2M), measures the actual amount of water vapor present in the air near Earth's surface. This measurement tells us the exact mass of water vapor per unit of air mass, typically measured in grams per kilogram (g/kg).",
+    "archivo": "ac43767c_Humedad_NASA.png"
+  },
+  {
+    "id": "d8c27fff",
+    "titulo": "GEOS-FP Near-Surface Temperature",
+    "ubicacion": "Global",
+    "descripcion": "Weather models begin their forecasts by integrating observations from ground stations, aircraft, balloons, and a growing constellation of Earth observing satellites to estimate the most realistic atmospheric state. The Goddard Earth Observing System Forward Processing (GEOS-FP) system is a research model maintained by NASA’s Global Modeling and Assimilation Office to demonstrate innovative new ways to use satellite data to improve predictions of weather, air quality, and greenhouse gases and to help NASA collect new observations of our home planet.",
+    "archivo": "d8c27fff_Temperatura_NASA.png"
+  },
+  {
+    "id": "b2f8dfd3",
+    "titulo": "Near surface Ozone (O3)",
+    "ubicacion": "Global",
+    "descripcion": "Ozone, a molecule comprised of three oxygen atoms, is critically important to Earth’s atmosphere. Many miles above the surface, it absorbs harmful ultraviolet radiation, helping make the planet habitable for humans. Ozone, a molecule comprised of three oxygen atoms, is critically important to Earth’s atmosphere. Many miles above the surface, it absorbs harmful ultraviolet radiation, helping make the planet habitable for humans.",
+    "archivo": "b2f8dfd3_Ozono_NASA.png"
+  },
+  {
+    "id": "fb3a9a0e",
+    "titulo": "GEOS-FP Precipitation and Clouds",
+    "ubicacion": "Global",
+    "descripcion": "This animation overlays total precipitation, including both rain and snow, atop simulated cloud fields shaded by their optical thickness. Precipitation patterns are shifting as a result of climate change because warmer temperatures allow the atmosphere to evaporate and store more water vapor.",
+    "archivo": "fb3a9a0e_Precipitaciones_y_nubes_NASA.png"
+  },
+  {
+    "id": "90230e4e",
+    "titulo": "Global Sea Surface Currents and Temperature",
+    "ubicacion": "Global",
+    "descripcion": "Global sea surface currents colored by temperature. These are the assembled (contiguous) versions of the animation. There are several resolutions to choose from, some are cropped for various purposes.",
+    "archivo": "90230e4e_TemperaturasOceano_NASA.png"
+  }
+]

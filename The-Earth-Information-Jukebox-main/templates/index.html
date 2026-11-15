@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block title %}EARTH TUNE | Listen to the Earth{% endblock %}
+
+{% block head %}
+<style>
+    .home-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 3.5rem 2rem;
+        border: 1px solid rgba(79, 195, 247, .25);
+        border-radius: 24px;
+        background: radial-gradient(ellipse at 80% 20%, rgba(0, 153, 255, .24), transparent 45%), linear-gradient(135deg, #071525, #102d49 60%, #071525);
+    }
+
+    .hero-label {
+        color: #4fc3f7;
+        letter-spacing: .22em;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+
+    .hero-title {
+        font-size: clamp(2.7rem, 7vw, 5rem);
+        font-weight: 800;
+        letter-spacing: .06em;
+        line-height: 1;
+    }
+
+    .hero-description {
+        max-width: 570px;
+        color: #c4d7e8;
+        line-height: 1.8;
+    }
+
+    .earth-decoration img {
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        mix-blend-mode: screen;
+        filter: drop-shadow(0 0 15px rgba(0, 174, 255, 0.45)) drop-shadow(0 0 40px rgba(0, 174, 255, 0.35));
+        animation: earth-float 6s ease-in-out infinite;
+    }
+    @keyframes earth-float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-12px);
+        }
+    }
+    .info-card {
+        height: 100%;
+        padding: 1.5rem;
+        border: 1px solid #1f4160;
+        border-radius: 16px;
+        background: #102238;
+    }
+
+        .info-card h3 {
+            color: #4fc3f7;
+            font-size: 1.1rem;
+        }
+
+    .section-label {
+        color: #4fc3f7;
+        letter-spacing: .15em;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+
+    .btn-earth {
+        background: #4fc3f7;
+        color: #071525;
+        border: none;
+    }
+
+        .btn-earth:hover {
+            background: #81d4fa;
+            color: #071525;
+        }
+</style>
+{% endblock %}
+
+{% block descripcion %}
+
+<section class="home-hero mb-5">
+    <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+            <p class="hero-label mb-3">NASA SPACE APPS PROJECT</p>
+
+            <h2 class="hero-title mb-3">
+                LISTEN TO<br>
+                THE EARTH<span class="text-info">.</span>
+            </h2>
+
+            <p class="hero-description mb-4">
+                Discover a new way to experience our planet.
+                Transform Earth's environmental data into sound
+                and explore the world through a different sense.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+                <a href="{{ url_for('cargar_imagen') }}"
+                   class="btn btn-earth btn-lg fw-bold px-4">
+                    Explore Earth
+                </a>
+
+                <a href="{{ url_for('playlist') }}"
+                   class="btn btn-outline-info btn-lg px-4">
+                    Open playlist
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="earth-decoration text-center">
+                <img src="{{ url_for('static', filename='Imagenes/earth-blue-marble.jpg') }}"
+                     alt="Planet Earth viewed from space">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5">
+    <p class="section-label mb-2">A NEW PERSPECTIVE</p>
+    <h2 class="h3 fw-bold mb-3">What if you could hear our planet?</h2>
+
+    <p class="text-body-secondary">
+        Earth's condition is usually communicated through images:
+        drought maps, temperature anomalies, precipitation records,
+        satellite observations, and many other forms of scientific data.
+        But what if we could experience this information through sound?
+    </p>
+
+    <p class="text-body-secondary">
+        EARTH TUNE transforms environmental observations into sound,
+        creating another way to explore scientific information.
+        By combining visual and auditory experiences, the project
+        also aims to make Earth data more accessible to people
+        with visual impairments.
+    </p>
+</section>
+
+<section class="mb-5">
+    <p class="section-label mb-2">HOW IT WORKS</p>
+    <h2 class="h3 fw-bold mb-4">Explore. Transform. Listen.</h2>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="info-card">
+                <h3>01 · Explore</h3>
+                <p class="text-body-secondary mb-0">
+                    Choose an image representing information about our planet.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="info-card">
+                <h3>02 · Transform</h3>
+                <p class="text-body-secondary mb-0">
+                    Let the system interpret the image and translate its
+                    visual information into sound.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="info-card">
+                <h3>03 · Listen</h3>
+                <p class="text-body-secondary mb-0">
+                    Experience the resulting sounds and explore your playlist.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-3">
+    <p class="section-label mb-2">SCIENCE & ACCESSIBILITY</p>
+    <h2 class="h3 fw-bold mb-3">Making science accessible to everyone</h2>
+
+    <p class="text-body-secondary">
+        NASA has explored the relationship between science and sound
+        through initiatives such as its <em>Universe of Sound</em>
+        program. Research published in 2024 in
+        <em>Frontiers in Communication</em> also explored how
+        sonification can support learning and accessibility.
+    </p>
+
+    <p class="text-body-secondary">
+        EARTH TUNE builds on this idea: scientific information
+        should be experienced through more than one sense.
+    </p>
+</section>
+
+{% endblock %}

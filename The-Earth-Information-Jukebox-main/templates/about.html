@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}About us · Earth Sonification Jukebox{% endblock %}
+
+{% block descripcion %}
+<p class="mb-0">
+  Earth Sonification Jukebox was created for the NASA Space Apps Challenge to make Earth observation
+  data accessible through sound. Meet the team behind the project.
+</p>
+{% endblock %}
+
+{% block content %}
+<section class="card bg-body-tertiary border-0 shadow-sm" aria-labelledby="equipo-titulo">
+  <div class="row g-0">
+    <!-- Foto del equipo: se muestra si existe static/equipo/equipo.jpg (o .jpeg, .png, .webp) -->
+    <div class="col-md-5">
+      {% if foto_equipo %}
+        <img src="{{ foto_equipo }}" class="img-fluid w-100 h-100 object-fit-cover rounded-start"
+             alt="Photo of the Earth Sonification Jukebox team">
+      {% else %}
+        <div class="ratio ratio-4x3 h-100 border border-2 border-secondary-subtle rounded-start"
+             style="border-style: dashed !important;">
+          <div class="d-flex flex-column align-items-center justify-content-center text-body-secondary text-center p-3">
+            <span class="fs-1" aria-hidden="true">📷</span>
+            <span class="fw-semibold">Team photo</span>
+            <small>Add it as <code>static/equipo/equipo.jpg</code></small>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Descripción del equipo -->
+    <div class="col-md-7">
+      <div class="card-body p-4">
+        <h2 id="equipo-titulo" class="h4 mb-3">Our team</h2>
+        <p class="text-body-secondary">
+          We are a team dedicated to the engineering and science.
+        </p>
+        <p class="text-body-secondary mb-0">
+          Team:
+          Salvador Bernal.
+          Santiago Arriaga.
+          Eugenio Ramírez.
+          Alejandro Áviles.
+          Axel Alberto.
+          Petr Skorev.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
